@@ -5,7 +5,7 @@ description = ""
 authors = ["5x12 <contact@awolf.io>"]
 readme = "README.md"
 
-[tool.poetry.packages]
+[[tool.poetry.packages]]
 include = "module2"
 from = "src"
 

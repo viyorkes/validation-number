@@ -1,13 +1,10 @@
 [tool.poetry]
-name = "module2"
+name = "validation-number"
 version = "0.1.0"
 description = ""
 authors = ["5x12 <contact@awolf.io>"]
 readme = "README.md"
-
-[[tool.poetry.packages]]
-include = "module2"
-from = "src"
+package-mode = false  
 
 [tool.poetry.dependencies]
 python = "^3.10"

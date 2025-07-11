@@ -23,11 +23,11 @@ jobs:
           python-version: '3.10.7'
 
       - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-in-project: true
 
-      - name: Install dependencies using Makefile + Poetry
+      - name: Install dependencies using Poetry + Makefile
         run: poetry run make install
 
       - name: Lint with flake8 (make check)
